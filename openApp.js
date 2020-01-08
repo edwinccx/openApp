@@ -4,8 +4,8 @@
             this.isIOS = !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
             this.isWeixin = /MicroMessenger/i.test(navigator.userAgent);
 
-            this.andScheme = 'goodsDetail://store:8888/goodsDetail?url=2';     //这里是唤起App的协议，由Android同事提供 
-            this.iosScheme = 'goodsDetail';     //唤起协议，由iOS小哥哥提供 
+            this.andScheme = 'goodsDetail://store:8888/goodsDetail' + "?";     //这里是唤起App的协议，由Android同事提供 
+            this.iosScheme = 'goodsDetail' + ":" + "//";     //唤起协议，由iOS小哥哥提供 
             this.download = 'https://xxxxxxxxxx.com';  //应用商城链接
         }
     }
@@ -42,7 +42,7 @@
         var adsense = window.localStorage.getItem('adsense');
         var terminal_type = window.localStorage.getItem('terminal_type');
         var from = window.localStorage.getItem('from');
-        url+='productId=' + productId + '&' +  'activityId='  + activityId + '&' + 'specialId='  + specialId + '&' + 'promote_code='  + promote_code + '&' + 'adsense='  + adsense + '&' + 'terminal_type='  + terminal_type + '&' + 'from='  + from;
+        url +=  'productId=' + productId + '&' +  'activityId='  + activityId + '&' + 'specialId='  + specialId + '&' + 'promote_code='  + promote_code + '&' + 'adsense='  + adsense + '&' + 'terminal_type='  + terminal_type + '&' + 'from='  + from;
         console.log(url);   
         // return;
         var a = document.createElement("a");
